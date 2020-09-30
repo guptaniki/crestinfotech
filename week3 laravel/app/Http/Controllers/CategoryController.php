@@ -12,10 +12,10 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index(Request $request ,Category  $category)
     {
 
-        $c = Category::latest();
+        $c = Category::query();
         if(isset($request['name'])&&$request['name']=='') {
             $c->where('v_name', $request['name']);
         }
@@ -25,11 +25,11 @@ class CategoryController extends Controller
             $c->where('i_status', $request['status']);
 
         }
+        $c= Category::withCount('categoryProduct');
 
         $categorys = $c->get();
 
-
-
+//        dd($categorys);
 
         return view('category.index',compact('categorys'))
             ->with('i', (request()->input('page', 1) - 1) * 5);

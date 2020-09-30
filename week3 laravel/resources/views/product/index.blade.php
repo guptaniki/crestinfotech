@@ -19,8 +19,8 @@
     @endif
     <form action="{{url('product')}}" method="get" class="custom-control-form" style="margin-top:3%">
 
-        <div class="form-group">
-
+<table>
+    <td>
             <label><strong>Status :</strong></label>
 
             <select id='status' name="status" class="form-control" style="width: 200px">
@@ -30,6 +30,7 @@
                 <option value="1" >Deactive</option>
 
             </select>
+
             <input name ="name" type="text" >
 
             <button type="submit" class="btn btn-primary">Submit</button>
@@ -44,13 +45,20 @@
             <input type="number" name="maxqty" placeholder="max quantity">
             <button type="submit" class="btn btn-primary">filter quantity</button>
             <br><br>
-
+    </td>
+    <td>
             Sort By price :
             <input type="radio" name="pordering" value="priceorderasc">Lowest price
             <input type="radio" name="pordering" value="priceorderdesc">Higest price
-            <input name="priceordring " type="submit" value="price order" class="moreinfobutton" />
-        </div>
+            <input name="priceordring " type="submit" value="price order" class="moreinfobutton" /><br>
+            Sort By Quantity :
+            <input type="radio" name="qordering" value="qtyorderasc">Lowest Quantity
+            <input type="radio" name="qordering" value="qtyorderdesc">Higest Quantity
+            <input name="qtyordring " type="submit" value="Quantity order" class="moreinfobutton" />
+    </td>
+</table>
     </form>
+
     <table class="table table-bordered">
         <tr>
             <th>No</th>

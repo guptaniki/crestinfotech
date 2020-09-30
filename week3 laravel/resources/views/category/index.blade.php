@@ -59,6 +59,10 @@
                     @endif</td>
 
                 <td>
+
+                        {{$category->category_product_count}}
+                 </td>
+                <td>
                     <form action="{{ route('category.destroy',$category->id) }}" method="POST">
 
                         <a class="btn btn-info" href="{{ route('category.show',$category->id) }}">Show</a>

@@ -14,6 +14,8 @@ class Category extends Model
         'v_name','v_image','i_order','i_status'
     ];
 
-
+    public function categoryProduct() {
+        return $this->hasMany( Product_Category::class, 'f_category_id' );
+    }
 
 }

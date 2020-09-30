@@ -52,12 +52,10 @@ class ProductController extends Controller
             if($request['pordering'] == 'priceorderdesc'){ $c->orderBy('i_price','DESC')
                 ->orderBy('i_sale_price','DESC');}
         }
-        if((isset($request['pordering']))&& !empty($request['pordering']))
+        if((isset($request['qordering']))&& !empty($request['qordering']))
         {
-            if($request['pordering'] == 'priceorderasc'){ $c->orderBy('i_price','ASC')
-                ->orderBy('i_sale_price','ASC');}
-            if($request['pordering'] == 'priceorderdesc'){ $c->orderBy('i_price','DESC')
-                ->orderBy('i_sale_price','DESC');}
+            if($request['qordering'] == 'qtyorderasc'){ $c->orderBy('f_quantity','ASC');}
+            if($request['qordering'] == 'qtyorderdesc'){ $c->orderBy('f_quantity','DESC');}
         }
 
             $products = $c->get();
