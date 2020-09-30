@@ -25,37 +25,45 @@ class ProductController extends Controller
             $c->where('v_product_name', $request['name']);
         }
 
-        if(isset($request['status'])&& $request['status']==0 || isset($request['status'])&& $request['status']==1)
+        if((isset($request['status'])&& $request['status']==0)||(isset($request['status'])&& $request['status']==1))
         {
-            $c->where('i_status', $request['status']);
+            if(is_numeric($request['status']))
+            {
+
+                $c->where('i_status', $request['status']);
+
+            }
 
         }
         if((isset($request['min_price'])&&$request['min_price']!='')&&(isset($request['max_price'])&&$request['max_price']!='')) {
             $min = $request['min_price'];
-//            dd($min);
             $max = $request['max_price'];
-//            dd($max);
             $c->whereBetween('i_price',[$min,$max]);
         }
-
+        if((isset($request['minqty'])&&$request['minqty']!='')&&(isset($request['maxqty'])&&$request['maxqty']!='')) {
+            $min = $request['minqty'];
+            $max = $request['maxqty'];
+            $c->whereBetween('f_quantity',[$min,$max]);
+        }
+        if((isset($request['pordering']))&& !empty($request['pordering']))
+        {
+            if($request['pordering'] == 'priceorderasc'){ $c->orderBy('i_price','ASC')
+                                                                ->orderBy('i_sale_price','ASC');}
+            if($request['pordering'] == 'priceorderdesc'){ $c->orderBy('i_price','DESC')
+                ->orderBy('i_sale_price','DESC');}
+        }
+        if((isset($request['pordering']))&& !empty($request['pordering']))
+        {
+            if($request['pordering'] == 'priceorderasc'){ $c->orderBy('i_price','ASC')
+                ->orderBy('i_sale_price','ASC');}
+            if($request['pordering'] == 'priceorderdesc'){ $c->orderBy('i_price','DESC')
+                ->orderBy('i_sale_price','DESC');}
+        }
 
             $products = $c->get();
-        dd($products);
 
 
-//            foreach ($products as $rwo)
-//            {
-//                $new_id[$rwo['id']]=$rwo['id'];
-//
-//
-//
-//            }
-//
-//        foreach ($new_id as $row){
-//            $cat=Product_Category::where('f_product_id',$row)->get();
-//            $image=Product_image::where('f_product_id',$row)
-//                ->where('i_main',1)->get();
-//        }
+
 
 
         return view('product.index',compact('products'))

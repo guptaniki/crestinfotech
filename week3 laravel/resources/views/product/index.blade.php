@@ -31,19 +31,30 @@
 
             </select>
             <input name ="name" type="text" >
-           <input type="number" name="min_price">
-            <input type="number" name="max_price">
-            <button type="submit" class="btn btn-primary">Submit</button>
 
-{{--            <button type="submit" class="btn btn-primary">filter price</button>--}}
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <br>
+            <br>
+            <input type="number" name="min_price" placeholder="min price">
+            <input type="number" name="max_price" placeholder="max price">
+            <button type="submit" class="btn btn-primary">filter price</button>
+            <br>
+            <br>
+            <input type="number" name="minqty" placeholder="min quantity">
+            <input type="number" name="maxqty" placeholder="max quantity">
+            <button type="submit" class="btn btn-primary">filter quantity</button>
+            <br><br>
+
+            Sort By price :
+            <input type="radio" name="pordering" value="priceorderasc">Lowest price
+            <input type="radio" name="pordering" value="priceorderdesc">Higest price
+            <input name="priceordring " type="submit" value="price order" class="moreinfobutton" />
         </div>
     </form>
     <table class="table table-bordered">
         <tr>
             <th>No</th>
-{{--            <th>Category id </th>--}}
             <th>Name</th>
-{{--            <th>Main Image</th>--}}
             <th>Price</th>
             <th>Sale Price</th>
             <th>Quantity </th>
@@ -55,23 +66,9 @@
         @foreach ($products as $product)
             <tr>
                 <td>{{ ++$i }}</td>
-{{--                <td>--}}
-{{--                @foreach($cat as $row)--}}
-{{--                    @if(in_array($row['f_product_id'],$new_id))--}}
-{{--                   {{ $row->f_category_id }}--}}
-{{--                        @endif--}}
 
-{{--                @endforeach--}}
-{{--                </td>--}}
                     <td>{{ $product->v_product_name }}</td>
-{{--                <td> @foreach($image as $row)--}}
-{{--                        @if(in_array($row['f_product_id'],$new_id))--}}
 
-{{--                        <img src="/images/product/{{$row->v_image}}"  style="width: 100px; height: 100px;" >--}}
-{{--                   @endif--}}
-
-{{--                    @endforeach--}}
-{{--                </td>--}}
                 <td>{{ $product->i_price  }}</td>
                 <td>{{ $product->i_sale_price }}</td>
                 <td>{{ $product->f_quantity }}</td>
