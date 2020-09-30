@@ -1,0 +1,245 @@
+JavaScript is a browser based programming language.
+
+That means you do not need any kind of idea or any kind of software to be installed on your computerto learn or run JavaScript.
+
+The only thing you need to run JavaScript is just a browser and a notepad, and you can use any latestbrowser like Chrome or Safari Firefox.
+
+Anything will work fine.So there's no specific recommendation that you have to use no purpose, sublime visual studio code or nothing like that.
+
+One of the most amazing parts of JavaScript is that is it is simple and it is easy to start and learn.
+
+JavaScript is used in bigger applications like Acrobat Photoshop and many other popular applications.
+
+JavaScript is also used in the Summerside programming like Narges and Google Apps.
+So if you check out some of the history of JavaScript, JavaScript was first developed in 1995 and was Then the descript was renamed to ECMAScript in 1997 and in 1999 the official name was called three.In 2009, JavaScript release the ECMAScript and the leaders currently now which is available is ESX.
+
+iOS seven is still under development and it requires a lot of functionality.
+
+Ethics and S7 will not be covered in this course, although you're going to go until SFI and you're
+
+going to learn all the essential parts of the JavaScript.
+  
+ first statment 
+ 	<script type="text/javascript">
+		alert("hello crest infotech");
+	</script>
+
+how to comment in java script 
+// is used single line comment
+/**/ is used multiple/block line comment
+
+define must  be footer section in html file
+
+file extaion is .js must be define at a save time 
+and after  save the connect the js to html file you can use scrpit tag with src attribute
+
+we can create variable in java srcipt and var keyword,you can create variable letter,_,$ .we can't start with number define variable 
+various type of data type in java srcipt .
+intger,float,blooan,array,object,date,string
+
+condition in java scrpit
+if (condition)
+{
+	
+}
+
+
+programming Guidelines
+{brace}
+[brackets]
+(parentheses)
+
+opreator in java scrpit
+arithmatic operator (*,-,+/)
+assingment operator (=)
+comparsion operator(==,===)
+a==b
+a>b
+a<b
+a!=b
+a===b
+logical OR/AND operator(&& and ||)
+modulus (%)
+increment and decrement operator(++,--)
+prefix and postfix operator(++a,b--)
+ternary operator(?:)
+ extand condition 
+ if(condition)
+ {
+
+ }
+ else
+ {
+
+ }
+
+ nested condition
+ if(condition)
+ {
+ 	if(condition)
+ 	{
+
+ 	}
+ }
+ else
+ {
+
+ }
+operator precedence 
+* high precedence
+work with console 
+console.log():print value
+console.warn():display wanring 
+console.error():display error
+loop in java script
+while loop
+do while loop
+for loop
+ break keyword(stop any kind of condition and loops)
+ contiue keyword(some time we write some other condition than wirte continue keyword and after that continue else statment )
+
+Function
+ A JavaScript function is a block of code designed to perform a particular task.
+
+A JavaScript function is executed when "something" invokes it (calls it).
+syntax
+function name(parameter1, parameter2, parameter3) {
+  // code to be executed
+}
+
+
+
+variable scope 
+we can define variable in side the function variable scope is local variable scope
+we can define variable outside the function variable scope is global variable scope
+
+
+
+create array 
+hold multiple value 
+0 based index
+array having some function 
+join ():combine two array 
+reverse():reverse array
+sort():sorting array
+
+
+
+Number
+all numbers are 64 bit floating point numbers
+20 and 20.0 is the same in java scrpit
+using object math object
+math.max():maxinum number
+math.min():minimum number
+math.Pi:pi value
+math.log():logiridhm values
+math.random()
+math.round()
+math.sqrt()
+
+
+
+
+
+string
+we can define two type of string:
+"":double quote is define 
+'':single quote id define
+string having multiple function
+like vise
+length
+split()
+toUpperCase()
+toLowerCase()
+indeOf()
+lastindexOf()
+slice()
+substring()
+substr()
+
+
+
+
+dates in javascript
+var newdate = new Date();
+var newdate = new Date(2020,0,1);
+var newdate = new Date(2020,0,1,0,0,0);
+
+get the date
+today.getMonth();
+today.getFullYear();
+today.getYear();
+today.getDate();
+today.getHours();
+today.getTime();
+
+set the today
+
+today.setMonth();
+today.setFullYear();
+today.setYear();
+today.setDate();
+today.setHours();
+today.setTime();
+
+
+
+
+
+dom in java script
+ document.getElementById();
+document.getElementByTagName();
+document.nodeType();
+document.innerHTMLs();
+
+what is event?
+events are already happening
+when a pages is loaded its and event
+scrolling event
+click and moving cursor is also event
+every keypress is event
+event name
+Onload
+Onclick
+Onmouseover
+Onblur
+onfocus
+handleing event
+inline method
+external method 
+event listener 
+
+
+
+
+
+form validation
+HTML form validation can be done by JavaScript.
+
+If a form field (fname) is char length is 3 than show its"its ok ",after fname char length is eqval is 5 than show its"good ", 
+
+var fname=document.myform.fname;
+var msg=document.getElementById('msg');
+function runme()
+{
+
+	if(fname.value.length > 3)
+
+	{
+		msg.innerHTML="its ok";
+		msg.style.color="red";
+
+	}
+	else if(fname.value.length == 5)
+	{
+		msg.innerHTML="good";
+		msg.style.color="green";
+
+	}
+	else if(fname.value.length > 10)
+	{
+		msg.innerHTML="very good";
+		msg.style.color="yellow";
+
+	}
+}

@@ -1,0 +1,245 @@
+<!--  HTML documents must start with a document -->
+<!DOCTYPE html>
+<!-- html tag -->
+<html>
+<!-- haed part declaration in page -->
+	<head>
+<!-- define title in page -->
+		<title>
+		my page
+		</title>
+		<!-- The <style> element is used to define style information for a single HTML page: -->
+		<style type="text/css">
+			table, th, td {
+		/*Add a Border*/
+		border: 1px solid black;
+		/*Collapsed Borders*/
+		border-collapse: collapse;
+		/*Add Cell Padding*/
+		  padding: 15px;
+		  /*Left-align Headings*/
+		    text-align: left;
+		  /* Add Border Spacing*/
+		    border-spacing: 5px;
+		}
+		</style>
+		<!-- The <link> element defines the relationship between the current document and an external resource. -->
+		 <link rel="stylesheet" href=""> 
+		 <!-- The <meta> element is typically used to specify the character set, page description, keywords, author of the document, and viewport settings. -->
+
+		<meta charset="UTF-8">
+
+	</head>
+<!-- define body part in the page -->
+	<body>
+		
+		<h1>HTML Tables</h1>
+		<!-- The <table> tag defines an HTML table.Each table row is defined with a <tr> tag. Each table header is defined with a <th> tag. Each table data/cell is defined with a <td> tag.By default, the text in <th> elements are bold and centered.By default, the text in <td> elements are regular and left-aligned -->
+			<h2>Basic HTML Table</h2>
+
+		<table style="width:100%">
+			<!-- Add a Caption -->
+			  <caption>personal info table </caption>
+		  <tr>
+		  	<!--  Cell that Span Many Columns -->
+		    <th colspan="2">name</th>
+		    <!-- <th>Lastname</th>  -->
+		    <th>Age</th>
+		  </tr>
+		  <tr>
+		    <td>Jill</td>
+		    <td>Smith</td>
+		    <td>50</td>
+		  </tr>
+		  <tr>
+		    <td>Eve</td>
+		    <td>Jackson</td>
+		    <td>94</td>
+		  </tr>
+		  <tr>
+		    <td>John</td>
+		    <td>Doe</td>
+		    <td>80</td>
+		  </tr>
+		</table>
+		<br>
+		<table style="width:100%">
+		  <tr>
+		    <th>Name:</th>
+		    <td>Bill Gates</td>
+		  </tr>
+		  <tr>
+		  	<!-- Cell that Span Many Rows -->
+		    <th rowspan="2">Telephone:</th>
+		    <td>55577854</td>
+		  </tr>
+		  <tr>
+		    <td>55577855</td>
+		  </tr>
+		</table>
+		<!-- HTML Lists -->
+		<h1>HTML Lists</h1>
+		<!-- there is 3 type of list in html -->
+		<h2>An unordered HTML list</h2>
+
+		<ul>
+		  <li>Coffee</li>
+		  <li>Tea</li>
+		  <li>Milk</li>
+		</ul> 
+		<!-- Choose List Item Marker -->
+<!-- disc :	Sets the list item marker to a bullet (default)
+	circle: Sets the list item marker to a circle
+	square :Sets the list item marker to a square
+	none :The list items will not be marked -->
+	<!-- The CSS list-style-type property is used to define the style of the list item marker.  -->
+	<h4>disc :	Sets the list item marker to a bullet (default)</h5>
+	<ul style="list-style-type:disc;">
+	  	<li>Coffee</li>
+	 	 <li>Tea</li>
+	 	 <li>Milk</li>
+	</ul> 
+	<h4>circle: Sets the list item marker to a circle</h5>
+	<ul style="list-style-type:circle;">
+	  	<li>Coffee</li>
+	 	 <li>Tea</li>
+	 	 <li>Milk</li>
+	</ul> 
+	<h4>square :Sets the list item marker to a square</h5>
+	<ul style="list-style-type:square;">
+	  	<li>Coffee</li>
+	 	 <li>Tea</li>
+	 	 <li>Milk</li>
+	</ul> 
+	<h4>none :The list items will not be marked</h5>
+	<ul style="list-style-type:none;">
+	  	<li>Coffee</li>
+	 	 <li>Tea</li>
+	 	 <li>Milk</li>
+	</ul> 
+	<!-- Nested HTML Lists -->
+	<h2>Nested HTML Lists</h2>
+	 <ul>
+	  <li>Coffee</li>
+	  <li>Tea
+	    <ul>
+	      <li>Black tea</li>
+	      <li>Green tea</li>
+	    </ul>
+	  </li>
+	  <li>Milk</li>
+	</ul> 
+
+
+	<h2>An ordered HTML list</h2>
+
+	<ol>
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol>  
+	<!-- The Type Attribute -->
+	<h4>The Type Attribute</h4>
+	<!-- The type attribute of the <ol> tag, defines the type of the list item marker -->
+		<!--type="1" 	The list items will be numbered with numbers (default)
+			type="A" 	The list items will be numbered with uppercase letters
+			type="a" 	The list items will be numbered with lowercase letters
+			type="I" 	The list items will be numbered with uppercase roman numbers
+			type="i" 	The list items will be numbered with lowercase roman numbers -->
+	<h4>type="1" 	The list items will be numbered with numbers (default)</h5>
+	 <ol type="1">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol> 
+	<h4>type="A" 	The list items will be numbered with uppercase letters</h5>
+	 <ol type="A">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol> 
+	<h4>type="a" 	The list items will be numbered with lowercase letters</h5>
+	 <ol type="a">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol> 
+	<h4>type="I" 	The list items will be numbered with uppercase roman numbers</h5>
+	 <ol type="I">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol> 
+	<h4>type="i" 	The list items will be numbered with lowercase roman numbers</h5>
+	 <ol type="i">
+	  <li>Coffee</li>
+	  <li>Tea</li>
+	  <li>Milk</li>
+	</ol> 
+
+	<h2>A Description List</h2>
+
+	<dl>
+	  <dt>Coffee</dt>
+	  <dd>- black hot drink</dd>
+	  <dt>Milk</dt>
+	  <dd>- white cold drink</dd>
+	</dl>
+	<!--
+    Use the HTML <dl> element to define a description list
+    Use the HTML <dt> element to define the description term
+    Use the HTML <dd> element to describe the term in a description list
+  -->
+  <!-- Block and Inline Elements -->
+  <h2>Block and Inline Elements</h2>
+  <!--Block Elements  -->
+  <h1> The div element is a block-level element.</h1>
+  	 <div>Hello World</div> 
+  	<!-- inline Elements -->
+  	<h1>This is a <span> element inside a paragraph.</h1>
+  		 <span>Hello World</span> 
+	</body>
+<!-- Iframes -->
+<h3>Iframes</h3>
+
+
+<iframe src="my page.html" height="200" width="300" title="Iframe Example"></iframe>
+
+<!--     <header> - Defines a header for a document or a section
+    <nav> - Defines a set of navigation links
+    <section> - Defines a section in a document
+    <article> - Defines an independent, self-contained content
+    <aside> - Defines content aside from the content (like a sidebar)
+    <footer> - Defines a footer for a document or a section
+    <details> - Defines additional details that the user can open and close on demand
+    <summary> - Defines a heading for the <details> element
+ -->
+ <!-- Forms -->
+<h4>Forms</h4>
+<!-- The <form> element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons -->
+	<!-- The HTML <input> element is the most used form element. An <input> element can be displayed in many ways, depending on the type attribute. -->
+<!-- 	<input type="text"> 	Displays a single-line text input field
+<input type="radio"> 	Displays a radio button (for selecting one of many choices)
+<input type="checkbox"> 	Displays a checkbox (for selecting zero or more of many choices)
+<input type="submit"> 	Displays a submit button (for submitting the form)
+<input type="button"> 	Displays a clickable button -->
+	 <form>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br>
+  <input type="radio" id="other" name="gender" value="other">
+  <label for="other">Other</label>
+  <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+  <label for="vehicle1"> I have a bike</label><br>
+  <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+  <label for="vehicle2"> I have a car</label><br>
+  <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+  <label for="vehicle3"> I have a boat</label>
+  <input type="submit" value="Submit">
+</form> 
+</html>

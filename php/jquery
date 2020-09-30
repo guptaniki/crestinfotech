@@ -1,0 +1,103 @@
+
+jQuery Introduction
+
+
+jQuery is a fast and concise JavaScript library created by John Resig in 2006. jQuery simplifies HTML document traversing, event handling, animating, and Ajax interactions for Rapid Web Development
+What is jQuery
+
+    jQuery is a small and lightweight JavaScript library.
+    jQuery is cross-platform.
+    jQuery means "write less do more".
+    jQuery simplifies AJAX call and DOM manipulation.
+
+    jQuery Syntax
+    $(selector).action()
+    A $ sign to define/access jQuery
+    A (selector) to "query (or find)" HTML elements
+    A jQuery action() to be performed on the element(s)
+The element Selector
+The jQuery element selector selects elements based on the element name.
+$("p") 
+The #id Selector
+The jQuery #id selector uses the id attribute of an HTML tag to find the specific element.
+$("#test") 
+What are Events?
+All the different visitors' actions that a web page can respond to are called events.
+jQuery Syntax For Event Methods
+$("p").click(); 
+click():The click() method attaches an event handler function to an HTML element.The function is executed when the user clicks on the HTML element.
+dblclick():The dblclick() method attaches an event handler function to an HTML element.The function is executed when the user double-clicks on the HTML element
+mouseenter():The mouseenter() method attaches an event handler function to an HTML element.The function is executed when the mouse pointer enters the HTML element
+mouseleave():The function is executed when the mouse pointer leaves the HTML element
+mousedown():The function is executed, when the left, middle or right mouse button is pressed down, while the mouse is over the HTML element
+mouseup():The function is executed, when the left, middle or right mouse button is released, while the mouse is over the HTML element
+hover():The first function is executed when the mouse enters the HTML element, and the second function is executed when the mouse leaves the HTML element
+focus():The function is executed when the form field gets focus
+blur():The function is executed when the form field loses focus
+The on() Method:The on() method attaches one or more event handlers for the selected elements.
+
+
+jQuery Effects - 
+Hide and Show
+jQuery hide()
+Demonstrates a simple jQuery hide() method.
+
+jQuery hide()
+Another hide() demonstration. How to hide parts of text.
+
+Fading
+jQuery fadeIn()
+ $(selector).fadeIn(speed,callback);
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The optional callback parameter is a function to be executed after the fading completes.
+
+jQuery fadeOut()
+ $(selector).fadeOut(speed,callback);
+ The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The optional callback parameter is a function to be executed after the fading completes.
+
+jQuery fadeToggle()
+The jQuery fadeToggle() method toggles between the fadeIn() and fadeOut() methods.
+If the elements are faded out, fadeToggle() will fade them in.
+If the elements are faded in, fadeToggle() will fade them out. 
+ $(selector).fadeToggle(speed,callback);
+ The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The optional callback parameter is a function to be executed after the fading completes.
+
+jQuery fadeTo()
+The jQuery fadeTo() method allows fading to a given opacity (value between 0 and 1). $(selector).fadeTo(speed,opacity,callback);
+The required speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The required opacity parameter in the fadeTo() method specifies fading to a given opacity (value between 0 and 1).
+The optional callback parameter is a function to be executed after the function completes.
+
+
+Sliding 
+
+    slideDown()
+    The jQuery slideDown() method is used to slide down an element.
+	Syntax:
+	$(selector).slideDown(speed,callback);
+	The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+	The optional callback parameter is a function to be executed after the sliding completes.
+
+    slideUp()
+    The jQuery slideUp() method is used to slide up an element.
+	Syntax:
+	$(selector).slideUp(speed,callback);
+	The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.	
+	The optional callback parameter is a function to be executed after the sliding completes.
+
+    slideToggle()
+    The jQuery slideToggle() method toggles between the slideDown() and slideUp() methods.
+	If the elements have been slid down, slideToggle() will slide them up.
+	If the elements have been slid up, slideToggle() will slide them down.
+	$(selector).slideToggle(speed,callback);
+	The optional speed parameter can take the following values: "slow", "fast", milliseconds.
+	The optional callback parameter is a function to be executed after the sliding completes
+Animations 
+The jQuery animate() method is used to create custom animations.
+Syntax:
+$(selector).animate({params},speed,callback);
+The required params parameter defines the CSS properties to be animated.
+The optional speed parameter specifies the duration of the effect. It can take the following values: "slow", "fast", or milliseconds.
+The optional callback parameter is a function to be executed after the animation completes.

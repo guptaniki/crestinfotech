@@ -1,0 +1,154 @@
+body {
+    font-size: 19px;
+}
+table{
+    width: 50%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: left;
+}
+/*tr {
+    border-bottom: 1px solid #cbcbcb;
+}*/
+th, td{
+    border: none;
+    height: 30px;
+    padding: 2px;
+}
+/*tr:hover {
+    background: #F5F5F5;
+}
+*/
+form {
+    width: 45%;
+    margin: 50px auto;
+    text-align: left;
+    padding: 20px; 
+    border: 1px solid #bbbbbb; 
+    border-radius: 5px;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #5F9EA0;
+    border: none;
+    border-radius: 5px;
+}
+.edit_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    background: #2E8B57;
+    color: white;
+    border-radius: 3px;
+}
+
+.del_btn {
+    text-decoration: none;
+    padding: 2px 5px;
+    color: white;
+    border-radius: 3px;
+    background: #800000;
+}
+.msg {
+    margin: 30px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    width: 50%;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+.form-control, .dd-handle {
+  color: #324148;
+  border-width: 2px;
+  border-color: #eaecec;
+  padding: .375rem .75rem;
+  height: calc(2.25rem + 4px); }
+  .form-control:focus, .dd-handle:focus {
+    box-shadow: none;
+    border-color: #00acf0; }
+  .form-control.square-input, .square-input.dd-handle {
+    border-radius: 0; }
+  .form-control:disabled, .dd-handle:disabled {
+    background-color: #fff;
+    border-color: #f5f5f6;
+    color: #c1c6c8;
+    opacity: 1; }
+  .form-control[readonly], [readonly].dd-handle {
+    background-color: #fff;
+    border-color: #d6d9da; }
+  .form-control.filled-input, .filled-input.dd-handle {
+    background: #f5f5f6;
+    border: none; }
+    .form-control.filled-input:focus, .filled-input.dd-handle:focus {
+      background: #eaecec;
+      border: none;
+      box-shadow: none; }
+    .form-control.filled-input:disabled, .filled-input.dd-handle:disabled {
+      background: rgba(245, 245, 246, 0.6); }
+    .form-control.filled-input[readonly], .filled-input[readonly].dd-handle {
+      background-color: #d6d9da; }
+  .form-control.outline-input, .outline-input.dd-handle {
+    background: transparent; }
+  .form-control.transparent-input, .transparent-input.dd-handle {
+    background: transparent;
+    border: none; }
+    .form-control.transparent-input:focus, .transparent-input.dd-handle:focus {
+      background: transparent;
+      border: none;
+      box-shadow: none; }
+  .form-control.rounded-input, .rounded-input.dd-handle {
+    border-radius: 50px; }
+  .form-control::-webkit-input-placeholder, .dd-handle::-webkit-input-placeholder {
+    color: #c1c6c8; }
+  .form-control:-moz-placeholder, .dd-handle:-moz-placeholder {
+    color: #c1c6c8; }
+  .form-control::-moz-placeholder, .dd-handle::-moz-placeholder {
+    color: #c1c6c8; }
+  .form-control:-ms-input-placeholder, .dd-handle:-ms-input-placeholder {
+    color: #c1c6c8; }
+
+.form-control-lg,
+.custom-select-lg {
+  font-size: 1.1rem;
+  padding: .5rem 1rem;
+  height: calc(2.875rem + 4px); }
+
+.form-control-sm,
+.custom-select-sm {
+  font-size: 0.875rem;
+  padding: .25rem .5rem;
+  height: calc(1.8125rem + 4px); }
+
+.custom-select {
+  padding-right: 1.75rem; }
