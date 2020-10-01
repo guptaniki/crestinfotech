@@ -15,6 +15,9 @@
                         @endif
 
                         {{ __('You are logged in!') }}
+                            <a class="btn btn-success" href="{{ url('category') }}">Category</a>
+                            <a class="btn btn-success" href="{{ url('product') }}">Product</a>
+
                     </div>
                 </div>
             </div>

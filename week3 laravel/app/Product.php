@@ -13,4 +13,7 @@ class Product extends Model
     protected $fillable = [
         'v_product_name','v_product_code','i_price','i_sale_price','f_quantity','i_order','i_status'
     ];
+    public function categorytoProduct() {
+        return $this->hasMany( Product_Category::class, 'f_product_id' );
+    }
 }
