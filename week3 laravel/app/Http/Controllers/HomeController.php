@@ -33,27 +33,50 @@ class HomeController extends Controller
 
         return view('home',compact('categorys'));
     }
-    public function productlist(Product $product)
+    public function productlist(Request $request)
     {
-        $cat=Category::query();
-        $cat->withCount('categoryProduct')->where('i_status',1);
-        $categorys=$cat->get();
+        if ($request['cat_id'] != '') {
+            $proc = DB::table('product__categories')
+                ->where('f_category_id', $request['cat_id'])
+                ->select('f_product_id')
+                ->pluck('f_product_id')
+                ->toArray();
+            $products = Product::whereIn('id', $proc)
+                ->get();
+            $main_images = DB::table('product_images')->whereIn('f_product_id', $proc)
+                ->where('i_main', 1)
+                ->get();
+        } else {
+            $products = Product::all();
+            $pro = DB::table('products')
+                ->select('id')
+                ->pluck('id')
+                ->toArray();
 
-//        $pro=all();
-        $pro=Product::all();
-//        $produc=$pro->get();
-//        dd($pro);
-        foreach($pro as $p)
-        {
-//            dd($p->id);
-            $procat=DB::table('product__categories')->where('f_product_id',$p->id);
-            dd($procat);
+            $main_images = DB::table('product_images')->whereIn('f_product_id', $pro)
+                ->where('i_main', 1)
+                ->get();
 
         }
+    }
 
+        public function search(Request $request)
+    {
+        $p=Product::query();
+        if(isset($request['name'])&&$request['name']!='') {
+            $p->where('v_product_name','LIKE', '%'.$request['name'].'%');
+        }
 
+        $products=$p->get();
+            $pro= DB::table('products')
+                ->select('id')
+                ->pluck('id')
+                ->toArray();
 
+            $main_images=DB::table('product_images')->whereIn('f_product_id',$pro)
+                ->where('i_main',1)
+                ->get();
 
-        return view('home',compact('categorys'));
+        return view('search',compact('products','main_images'));
     }
 }

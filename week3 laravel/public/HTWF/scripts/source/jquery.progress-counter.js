@@ -800,7 +800,7 @@
 * Documentation: www.framework-y.com/components/components.html#counter
 * Documentation: www.framework-y.com/components/components.html#countdown
 * Documentation: www.framework-y.com/components/components.html#progress-bar
-* 
+*
 * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
 */
 

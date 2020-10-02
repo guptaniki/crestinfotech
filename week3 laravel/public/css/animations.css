@@ -453,7 +453,7 @@ GRAPHICS ANIMATIONS - GLOBAL SETTINGS
 }
 
 /*
-============================== 
+==============================
 GANIMATION - PULSE
 ==============================
 */
@@ -496,7 +496,7 @@ GANIMATION - PULSE
     }
 
 /*
-============================== 
+==============================
 GANIMATION - EXPLODE
 ==============================
 */
@@ -577,7 +577,7 @@ GANIMATION - GLASS
         opacity: 0;
         z-index: 1;
     }
-    
+
 [data-anima] {
     -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;

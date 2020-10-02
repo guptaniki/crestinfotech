@@ -5,7 +5,7 @@
 * Google Maps script for show Google maps in different ways
 * The script require maps.googleapis.com/maps/api/js script
 * Documentation: www.framework-y.com/components/components.html#google-maps
-* 
+*
 * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
 */
 

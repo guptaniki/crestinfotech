@@ -3,7 +3,7 @@
 * TEMPLATE - TWOSIDE
 * ==============================
 * Documentation: www.framework-y.com/templates/fullpage/template-fullpage-twosides-documentation.html
-* 
+*
 * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
 */
 

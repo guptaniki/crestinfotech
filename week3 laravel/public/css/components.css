@@ -2,7 +2,7 @@
 /*
 ==============================
 COLLAPSE & ACCORDION
-============================== 
+==============================
 */
 
 .collapse-box .panel, .accordion-list .panel {
@@ -100,7 +100,7 @@ TABS
     background-color: #FFF;
     z-index: 1;
 }
- 
+
 .tab-box.inverse .nav-tabs {
     border-bottom: 0;
     border-top: 1px solid #DDD;

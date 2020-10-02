@@ -69,7 +69,7 @@ div .call-action-box [class*="col-"]:last-child {
     margin-left: auto;
     margin-right: auto;
 }
- 
+
 .block-infos p,.text-center *   {
     text-align: center !important;
 }
@@ -272,4 +272,4 @@ div .social-feed-fb li {
     width: 65px !important;
     right: 0;
 }
- 
+

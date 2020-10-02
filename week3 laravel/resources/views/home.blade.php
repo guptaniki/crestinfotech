@@ -27,7 +27,8 @@
                             <div class="adv-img-double-content">
                                 <div class="img-box adv-img adv-img-half-content" data-anima="fade-bottom" data-trigger="hover" data-anima-out="hide">
                                     <i class="fa fa-clock-o anima anima-fade-left"></i>
-                                    <a class="img-box img-fade-bottom" href="{{url('productlist')}}">
+{{--                                    {{$category->id}}--}}
+                                    <a class="img-box img-fade-bottom" href="{{url('productlist/?cat_id='.$category->id)}}">
                                         <img src="/images/category/{{$category->v_image}}"  style="width: 100px; height: 100px;" >
                                     </a>
 

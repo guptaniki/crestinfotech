@@ -4,7 +4,7 @@
 		if (options.id === undefined || options.access_token === undefined) {
 			return;
 		}
-		
+
 		options = $.extend({
 			id: '',
 			access_token: '',
@@ -37,12 +37,12 @@
 			},
 			on_complete: null
 		}, options);
-	
+
 		var graphURL = 'https://graph.facebook.com/',
 			graphTYPE = (options.show_guest_entries === false) ? 'posts' : 'feed',
 			graphPOSTS = graphURL + options.id + '/' + graphTYPE + '/?access_token=' + options.access_token + '&limit=' + options.limit + '&locale=' + options.locale + '&date_format=U&callback=?',
 			e = $(this);
-		
+
 		e.append('<div class="facebook-loading"></div>');
 
 		$.getJSON(graphPOSTS, function(posts) {
@@ -68,7 +68,7 @@
 							output += '<div class="author"><a href="http://www.facebook.com/profile.php?id=' + this.from.id + '" target="_blank" title="' + this.from.name + '">' + this.from.name + '</a></div>';
 							output += '<div class="date">' + timeToHuman(this.created_time) + '</div>';
 						output += '</div>';
-						
+
 						if (this.message !== undefined) {
 							if (options.message_length > 0 && this.message.length > options.message_length) {
 								output += '<div class="message">' + modText(this.message.substring(0, options.message_length)) + '...</div>';
@@ -82,7 +82,7 @@
 								output += '<div class="story">' + modText(this.story) + '</div>';
 							}
 						}
-						
+
 						if (this.type === 'link' || this.type === 'photo' || this.type === 'video') {
 							if (this.picture !== undefined || this.object_id !== undefined) {
 								media_class = ' border-left';
@@ -108,7 +108,7 @@
 								output += '</div>';
 							output += '</div>';
 						}
-						
+
 						output += '<div class="meta-footer">';
 							output += '<time class="date" datetime="' + this.created_time + '" pubdate>' + timeToHuman(this.created_time) + '</time>';
 							if (this.likes !== undefined && this.likes.data !== undefined) {
@@ -145,7 +145,7 @@
 							split_id = this.id.split('_');
 							output += '<div class="actionlinks"><span class="like"><a href="http://www.facebook.com/permalink.php?story_fbid=' + split_id[1] + '&id=' + split_id[0] + '" target="_blank">' + options.text_labels.like + '</a></span><span class="seperator">&middot;</span><span class="comment"><a href="http://www.facebook.com/permalink.php?story_fbid=' + split_id[1] + '&id=' + split_id[0] + '" target="_blank">' + options.text_labels.comment + '</a></span><span class="seperator">&middot;</span><span class="share"><a href="http://www.facebook.com/permalink.php?story_fbid=' + split_id[1] + '&id=' + split_id[0] + '" target="_blank">' + options.text_labels.share + '</a></span></div>';
 						output += '</div>';
-						
+
 						if (this.likes !== undefined && this.likes.data !== undefined) {
 							output += '<ul class="like-list">';
 								for (var l = 0; l < this.likes.data.length; l++) {
@@ -174,7 +174,7 @@
 							output += '</ul>';
 						}
 					output += '</li>';
-	
+
 					e.append(output);
 				}
 			});
@@ -197,7 +197,7 @@
 				options.on_complete.call();
 			}
 		});
-	
+
 		function modText(text) {
 			return nl2br(autoLink(escapeTags(text)));
 		}
@@ -214,7 +214,7 @@
 			var timestamp = new Date(time*1000),
                 dateString = timestamp.toGMTString(),
                 time_difference = Math.round(new Date().getTime()/1000)-time;
-			
+
 			if (time_difference < 10) {
 				return 'F&aring; sekunder siden';
 			} else if (time_difference < 60) {

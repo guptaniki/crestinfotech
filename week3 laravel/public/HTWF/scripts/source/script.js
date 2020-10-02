@@ -1,10 +1,10 @@
-/* 
+/*
  * ===========================================================
  * MAIN SCRIPT- FRAMEWORK Y
  * ===========================================================
  * This script manage all the js functions and the 3r party plugins.
  * Framework website: www.framework-y.com
- * 
+ *
  * ANIMATIONS
  * -------------------------------------------------------------
  * Manage all the animations on page scroll, on click, on hover
@@ -152,7 +152,7 @@ function setImgPos(n) {
 //OTHERS
 window.onload = function () { function a(a, b) { var c = /^(?:file):/, d = new XMLHttpRequest, e = 0; d.onreadystatechange = function () { 4 == d.readyState && (e = d.status), c.test(location.href) && d.responseText && (e = 200), 4 == d.readyState && 200 == e && (a.outerHTML = d.responseText) }; try { d.open("GET", b, !0), d.send() } catch (f) { } } var b, c = document.getElementsByTagName("*"); for (b in c) c[b].hasAttribute && c[b].hasAttribute("data-include") && a(c[b], c[b].getAttribute("data-include")) };
 
-/* 
+/*
  * FUNCTIONS
  * -------------------------------------------------------------
  * getURLParameter - Read the parameters of the url like www.site.com?paramter-name=value
@@ -220,7 +220,7 @@ function isScrollView(t) {
     var animaTimeout_2 = [];
     var default_anima;
 
-    /* 
+    /*
      * FUNCTIONS
      * -------------------------------------------------------------
      * toggleClick - Manage on click and on second click events
@@ -342,7 +342,7 @@ function isScrollView(t) {
         window[name] = value;
     };
 
-    /* 
+    /*
      * THIRD PARTS PLUGINS
      * -------------------------------------------------------------
      * Functions and methods that menage the execution of external plugins
@@ -1249,7 +1249,7 @@ function isScrollView(t) {
         });
 
 
-        /* 
+        /*
         * THIRD PARTS PLUGINS
         * -------------------------------------------------------------
         * Functions and methods that menage the execution of external plugins

@@ -1,7 +1,7 @@
 
 /*
  * Name : TweeCool
- * version: 1.9 
+ * version: 1.9
  * Description: Get the latest tweets from twitter.
  * Website: www.tweecool.com
  * Licence: No licence, feel free to do whatever you want.
@@ -20,12 +20,12 @@
                 profile_image: true,
                 show_time: true,
                 show_media: false,
-                show_media_size: 'thumb',  //values: small, large, thumb, medium 
+                show_media_size: 'thumb',  //values: small, large, thumb, medium
                 show_actions: false,
                 action_reply_icon: '&crarr;',
                 action_retweet_icon: '&prop;',
                 action_favorite_icon: '&#10084',
-                profile_img_url: 'profile', //Values: profile, tweet 
+                profile_img_url: 'profile', //Values: profile, tweet
                 show_retweeted_text: false //This will show the original tweet in order to avoid any truncated text, and also the "RT @tweecool:" is removed which helps with 140 character limit
 
             }
@@ -396,7 +396,7 @@
 * Social stream of Facebook and Twitter, this script have 4 display types: simple list, scroll box container, slider and carousel
 * The script require Flexslider for slider and carousel display type and Scroll box for scroll box display type
 * Documentation: www.framework-y.com/components/social.html
-* 
+*
 * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
 */
 

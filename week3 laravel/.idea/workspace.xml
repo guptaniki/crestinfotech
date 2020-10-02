@@ -197,7 +197,7 @@
       <change afterPath="$PROJECT_DIR$/public/images/overlay/squares.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/overlay/tile.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/images/overlay/tv.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/productlist.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/Constants.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/php/array.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/php/condition.php" beforeDir="false" />
@@ -493,7 +493,7 @@
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/category/index.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/category/layout.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/category/show.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/home.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/productlist.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/layouts/app.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/product/create.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/week3 laravel/resources/views/product/edit.blade.php" beforeDir="false" />
@@ -894,7 +894,9 @@
       <workItem from="1601461417746" duration="3738000" />
       <workItem from="1601468396574" duration="5786000" />
       <workItem from="1601527393912" duration="130000" />
-      <workItem from="1601533634120" duration="14844000" />
+      <workItem from="1601533634120" duration="15116000" />
+      <workItem from="1601613478653" duration="8819000" />
+      <workItem from="1601628891428" duration="10614000" />
     </task>
     <servers />
   </component>
@@ -941,10 +943,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1601014238645" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601557018609">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1601632746438">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601557018609" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1601632746438" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1601468475101">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -953,10 +955,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1601536192086" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601536207426">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601632859180">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601536207426" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601632859180" />
     <state x="425" y="187" key="run.anything.popup" timestamp="1601279880237">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

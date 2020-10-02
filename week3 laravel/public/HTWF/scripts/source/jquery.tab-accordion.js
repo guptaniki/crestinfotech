@@ -6,7 +6,7 @@
 * Documentation: www.framework-y.com/containers/others.html#tabs
 * Documentation: www.framework-y.com/containers/others.html#collapse
 * Documentation: www.framework-y.com/containers/others.html#accordion-lists
-* 
+*
 * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
 */
 

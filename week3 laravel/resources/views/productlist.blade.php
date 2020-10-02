@@ -22,19 +22,29 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-                        @foreach($categorys as $category)
+
+                        @foreach($products as $product)
 
                             <div class="adv-img-double-content">
                                 <div class="img-box adv-img adv-img-half-content" data-anima="fade-bottom" data-trigger="hover" data-anima-out="hide">
                                     <i class="fa fa-clock-o anima anima-fade-left"></i>
                                     <a class="img-box img-fade-bottom" href="#">
-                                        <img src="/images/category/{{$category->v_image}}"  style="width: 100px; height: 100px;" >
+                                        @foreach($main_images as $image)
+                                        @if($product->id==$image->f_product_id)
+
+                                                <img src="/images/product/{{$image->v_image}}"  style="width: 300px; height: 300px;" >
+                                      @endif
+
+                                        @endforeach
+
                                     </a>
 
                                 </div>
                                 <div class="caption-bottom">
-                                    <h2>{{$category->v_name}}</h2>
-                                    <p> Number of Product {{$category->category_product_count}} </p>
+                                    <h2>Product Name:{{$product->v_product_name}}</h2>
+                                    <h2>Price:<del>{{$product->i_price}}</del></h2>
+                                    <h2>Sale price:{{$product->i_sale_price}}</h2>
+
                                 </div>
                             </div>
                         @endforeach

@@ -6,9 +6,9 @@
  * Documentation: www.framework-y.com/components/components.html#counter
  * Documentation: www.framework-y.com/components/components.html#countdown
  * Documentation: www.framework-y.com/components/components.html#progress-bar
- * 
+ *
  * Schiocco - Copyright (c) Federico Schiocchet - Schiocco - Framework Y
- * 
+ *
  * jquery-countTo
  * Copyright (c) 2012-2014 Matt Huggins - The MIT License
  * URL: https://github.com/mhuggins/jquery-countTo/
