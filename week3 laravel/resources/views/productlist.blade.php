@@ -28,7 +28,7 @@
                             <div class="adv-img-double-content">
                                 <div class="img-box adv-img adv-img-half-content" data-anima="fade-bottom" data-trigger="hover" data-anima-out="hide">
                                     <i class="fa fa-clock-o anima anima-fade-left"></i>
-                                    <a class="img-box img-fade-bottom" href="#">
+                                    <a class="img-box img-fade-bottom" href="{{url('productsingle/?pro_id='.$product->id)}}">
                                         @foreach($main_images as $image)
                                         @if($product->id==$image->f_product_id)
 

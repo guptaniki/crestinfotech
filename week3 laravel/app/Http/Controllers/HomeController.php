@@ -58,6 +58,8 @@ class HomeController extends Controller
                 ->get();
 
         }
+        return view('productlist',compact('products','main_images'));
+
     }
 
         public function search(Request $request)
@@ -78,5 +80,24 @@ class HomeController extends Controller
                 ->get();
 
         return view('search',compact('products','main_images'));
+    }
+    public function productsingle(Request $request)
+    {
+            $products = Product::where('id', $request['pro_id'])
+                ->get();
+
+        foreach ($products as $p)
+            {
+                $main_images = DB::table('product_images')->where('f_product_id', $p->id)
+                    ->where('i_main', 1)
+                    ->get();
+                $other_images=DB::table('product_images')->where(['f_product_id' => $p->id])
+                    ->where('i_main',0)
+                    ->get();
+            }
+
+        return view('productsingle',compact('products','main_images','other_images'));
+
+
     }
 }
