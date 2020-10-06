@@ -5,10 +5,10 @@
         <script src='{{asset('HTWF/scripts/script.js')}}' type='text/javascript'></script>
 
         <!-- CSS -->
-        <link href="{{asset('HTWF/scripts/bootstrap/css/bootstrap.css')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/scripts/jquery.min.js')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/style.css')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/css/components.css')}}" type="text/css" rel="stylesheet">
+{{--        <link href="{{asset('HTWF/scripts/bootstrap/css/bootstrap.css')}}" type="text/css" rel="stylesheet">--}}
+{{--        <link href="{{asset('HTWF/scripts/jquery.min.js')}}" type="text/css" rel="stylesheet">--}}
+{{--        <link href="{{asset('HTWF/style.css')}}" type="text/css" rel="stylesheet">--}}
+{{--        <link href="{{asset('HTWF/css/components.css')}}" type="text/css" rel="stylesheet">--}}
     </head>
     <div class="container">
         <div class="row justify-content-center">
@@ -23,11 +23,12 @@
                             </div>
                         @endif
 
-                        @foreach($products as $product)
 
-                            <div class="adv-img-double-content">
-                                <div class="img-box adv-img adv-img-half-content" data-anima="fade-bottom" data-trigger="hover" data-anima-out="hide">
-                                    <i class="fa fa-clock-o anima anima-fade-left"></i>
+                            @foreach($products as $product)
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+
+{{--                            <div class="row">--}}
+                                    <div class="col-md-8">
                                     <a class="img-box img-fade-bottom" href="{{url('productsingle/?pro_id='.$product->id)}}">
                                         @foreach($main_images as $image)
                                         @if($product->id==$image->f_product_id)
@@ -39,15 +40,23 @@
 
                                     </a>
 
+
                                 </div>
-                                <div class="caption-bottom">
+
+                                <div class="col-md-2">
                                     <h2>Product Name:{{$product->v_product_name}}</h2>
                                     <h2>Price:<del>{{$product->i_price}}</del></h2>
                                     <h2>Sale price:{{$product->i_sale_price}}</h2>
 
                                 </div>
+                                    <div class="col-md-2">
+{{--                                        <h2>Product Name:{{$product->v_product_name}}</h2>--}}
+{{--                                        <h2>Price:<del>{{$product->i_price}}</del></h2>--}}
+{{--                                        <h2>Sale price:{{$product->i_sale_price}}</h2>--}}
+
+                                    </div>
                             </div>
-                        @endforeach
+                            @endforeach
 
                     </div>
                 </div>

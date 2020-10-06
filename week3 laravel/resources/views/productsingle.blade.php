@@ -1,15 +1,8 @@
-@extends('layouts.app1')
+{{--@extends('layouts.app1')--}}
+@extends('layout')
 
 @section('content')
-    <head>
-        <script src='{{asset('HTWF/scripts/script.js')}}' type='text/javascript'></script>
 
-        <!-- CSS -->
-        <link href="{{asset('HTWF/scripts/bootstrap/css/bootstrap.css')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/scripts/jquery.min.js')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/style.css')}}" type="text/css" rel="stylesheet">
-        <link href="{{asset('HTWF/css/components.css')}}" type="text/css" rel="stylesheet">
-    </head>
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -59,6 +52,7 @@
                                         <input type="text" name="total" id="total" />
                                     </div>
                                 </div>
+                                <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center" role="button" >Add to cart</a> </p>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
 
