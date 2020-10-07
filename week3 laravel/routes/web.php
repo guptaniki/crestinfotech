@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/productlist', 'HomeController@productlist')->name('productlist');
 Route::get('/search', 'HomeController@search')->name('search');
 Route::get('/productsingle', 'HomeController@productsingle')->name('productsingle');
+
+
 Route::get('/cart', 'HomeController@cart')->name('cart');
 Route::get('add-to-cart/{id}', 'HomeController@addToCart');
 Route::patch('update-cart', 'HomeController@update');

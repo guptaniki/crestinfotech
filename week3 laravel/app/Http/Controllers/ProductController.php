@@ -16,11 +16,8 @@ class ProductController extends Controller
      */
     public function index(Request $request)
     {
-        //
 
-//        dd($request['max_price']);
         $c=Product::query();
-//        dd($c);
         if(isset($request['name'])&&$request['name']!='') {
             $c->where('v_product_name', $request['name']);
         }

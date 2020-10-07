@@ -7,6 +7,7 @@ use App\Product_image;
 use Illuminate\Http\Request;
 use App\Category;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Session;
 
 class HomeController extends Controller
 {
@@ -94,19 +95,23 @@ class HomeController extends Controller
                 $other_images=DB::table('product_images')->where(['f_product_id' => $p->id])
                     ->where('i_main',0)
                     ->get();
+//                session()->put('f_quantity',$p->f_quantity);
             }
-
         return view('productsingle',compact('products','main_images','other_images'));
 
 
     }
-    public function cart()
+
+    public function cart(Request $request)
     {
+//        dd();
+
         return view('cart');
 
     }
-    public function addToCart($id)
+    public function addToCart($id,Request $request)
     {
+            $p=session()->get('f_quantity',$request['f_quantity']);
         $product=Product::find($id);
         $main_images = Product_image::where('f_product_id', $product->id)
             ->where('i_main', 1)
@@ -121,11 +126,12 @@ class HomeController extends Controller
                     }
 
         $cart = session()->get('cart');
+
         if(!$cart) {
             $cart = [
                 $id => [
                     "name" => $product->v_product_name,
-                    "quantity" => 1,
+                    "quantity" => $p,
                     "price" => $product->i_price,
                     "photo" => $pic
                 ]
@@ -142,7 +148,7 @@ class HomeController extends Controller
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
             "name" => $product->v_product_name,
-            "quantity" => 1,
+            "quantity" => $p,
             "price" => $product->i_price,
             "photo" => $pic
         ];
@@ -153,7 +159,6 @@ class HomeController extends Controller
     }
     public function update(Request $request)
     {
-//        dd($request);
         if($request->id and $request->quantity)
         {
             $cart = session()->get('cart');

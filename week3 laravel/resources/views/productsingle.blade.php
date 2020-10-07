@@ -21,14 +21,16 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="col-md-2">
                                         @foreach($main_images as $image)
-                                            <img src="/images/product/{{$image->v_image}}"  style="width: 50px; height: 50px;" onclick="showIt(this.src)" ><br>
+                                            <img src="/images/product/{{$image->v_image}}"  style="width: 50px; height: 50px;"  onclick="showIt(this.src)"><br>
                                         @endforeach
                                         @foreach($other_images as $image)
                                             <img src="/images/product/{{$image->v_image}}"  style="width: 50px; height: 50px;"  onclick="showIt(this.src)"><br>
                                         @endforeach
                                     </div>
                                     <div class="col-md-4">
-                                        <img src="" id="imageshow" style="display:none;width: 200px; height: 200px;" >
+                                        @foreach($main_images as $image)
+                                            <img src="/images/product/{{$image->v_image}}" id="imageshow" style="width: 200px; height: 200px;"><br>
+                                        @endforeach
 
                                     </div>
                                     <div class="col-md-6">
@@ -40,19 +42,22 @@
                                         <strong>Sale Price:</strong>
                                         {{ $product->i_sale_price }}
                                         <br>
+                                        <form action="{{url('addToCart')}}" method="get" class="custom-control-form" style="margin-top:3%">
+                                        <strong>quantity:</strong>
 
-                                        <strong>Qty:</strong>
-                                        {{ $product->f_quantity }}
+                                        <input type="number" value="{{ $product->f_quantity}}" class="" id="qty" name="quantity" onkeyup="multiply()" />
 
-                                        <input type="text" name="qty" id="qty" onkeyup="multiply()">
                                         <br><strong>PRICE</strong>
                                         <input type="text" name="price" id="price" value="{{$product->i_price}}" readonly/>
                                         <br>
                                         <strong>Total</strong>
                                         <input type="text" name="total" id="total" />
+                                            {{session()->put('f_quantity',$product->f_quantity)}}
+                                        <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center" role="button" >Add to cart</a> </p>
+                                        </form>
+
                                     </div>
                                 </div>
-                                <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center" role="button" >Add to cart</a> </p>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
 
@@ -84,19 +89,13 @@
             document.getElementById('imageshow').style.display='none';
         }
         function multiply() {
-           // var qty=document.getElementById('qty').value;
             a = Number(document.getElementById('qty').value);
             b = Number(document.getElementById('price').value);
-
-
-
                 c = a * b;
-
-
-
-
             document.getElementById('total').value = c;
 
         }
+
+
     </script>
 @endsection
