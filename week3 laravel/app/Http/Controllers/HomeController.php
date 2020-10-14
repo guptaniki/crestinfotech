@@ -104,14 +104,15 @@ class HomeController extends Controller
 
     public function cart(Request $request)
     {
-//        dd();
 
         return view('cart');
 
     }
     public function addToCart($id,Request $request)
     {
-            $p=session()->get('f_quantity',$request['f_quantity']);
+//        $t=session()->get('total',$request['total']);
+//        $s=session()->get('subtotal',$request['subtotal']);
+            $qty=session()->get('f_quantity',$request['f_quantity']);
         $product=Product::find($id);
         $main_images = Product_image::where('f_product_id', $product->id)
             ->where('i_main', 1)
@@ -130,14 +131,18 @@ class HomeController extends Controller
         if(!$cart) {
             $cart = [
                 $id => [
+                    "product_id"=>$id,
                     "name" => $product->v_product_name,
-                    "quantity" => $p,
+                    "quantity" => (int)$qty,
                     "price" => $product->i_price,
-                    "photo" => $pic
+                    "photo" => $pic,
+
                 ]
             ];
-
+//dd($cart);
             session()->put('cart', $cart);
+//            dd($cart);
+
             return redirect()->back()->with('success', 'Product added to cart successfully!');
         }
         if(isset($cart[$id])) {
@@ -147,10 +152,12 @@ class HomeController extends Controller
         }
         // if item not exist in cart then add to cart with quantity = 1
         $cart[$id] = [
+            "product_id"=>$id,
             "name" => $product->v_product_name,
-            "quantity" => $p,
+            "quantity" =>(int)$qty,
             "price" => $product->i_price,
-            "photo" => $pic
+            "photo" => $pic,
+
         ];
         session()->put('cart', $cart);
         return redirect()->back()->with('success', 'Product added to cart successfully!');
@@ -187,4 +194,5 @@ class HomeController extends Controller
             session()->flash('success', 'Product removed successfully');
         }
     }
+
 }

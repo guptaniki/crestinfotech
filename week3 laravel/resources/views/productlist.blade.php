@@ -1,5 +1,5 @@
-{{--@extends('layouts.app')--}}
-@extends('layout')
+@extends('layouts.app')
+{{--@extends('layout')--}}
 
 @section('content')
     <head>
