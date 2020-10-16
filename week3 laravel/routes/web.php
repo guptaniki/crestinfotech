@@ -31,8 +31,10 @@ Route::patch('update-cart', 'HomeController@update');
 Route::delete('remove-from-cart', 'HomeController@remove');
 Route::resource('category','CategoryController')->middleware('auth');
 Route::resource('product','ProductController')->middleware('auth');
-//Route::get('/order/checkout', /'OrderController@create')->name('checkout.index');
 
 Route::get('/order/create', 'OrderController@create');
-//Route::post('', 'OrderController@store')->name('store');
 Route::resource('order','OrderController');
+
+
+Route::get('stripe', 'StripePaymentController@stripe');
+Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');

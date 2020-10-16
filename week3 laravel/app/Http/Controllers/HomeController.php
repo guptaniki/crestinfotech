@@ -2,12 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\Product;
-use App\Product_Category;
 use App\Product_image;
 use Illuminate\Http\Request;
 use App\Category;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Session;
 
 class HomeController extends Controller
 {
@@ -95,7 +93,6 @@ class HomeController extends Controller
                 $other_images=DB::table('product_images')->where(['f_product_id' => $p->id])
                     ->where('i_main',0)
                     ->get();
-//                session()->put('f_quantity',$p->f_quantity);
             }
         return view('productsingle',compact('products','main_images','other_images'));
 
@@ -110,8 +107,6 @@ class HomeController extends Controller
     }
     public function addToCart($id,Request $request)
     {
-//        $t=session()->get('total',$request['total']);
-//        $s=session()->get('subtotal',$request['subtotal']);
             $qty=session()->get('f_quantity',$request['f_quantity']);
         $product=Product::find($id);
         $main_images = Product_image::where('f_product_id', $product->id)
@@ -139,9 +134,7 @@ class HomeController extends Controller
 
                 ]
             ];
-//dd($cart);
             session()->put('cart', $cart);
-//            dd($cart);
 
             return redirect()->back()->with('success', 'Product added to cart successfully!');
         }

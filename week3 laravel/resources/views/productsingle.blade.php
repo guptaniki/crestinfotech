@@ -1,4 +1,3 @@
-{{--@extends('layouts.app1')--}}
 @extends('layout')
 
 @section('content')
@@ -45,7 +44,7 @@
                                         <form action="{{url('addToCart')}}" method="get" class="custom-control-form" style="margin-top:3%">
                                         <strong>quantity:</strong>
 
-                                        <input type="number" value="{{ $product->f_quantity}}" class="" id="qty" name="quantity" onkeyup="multiply()" />
+                                        <input type="number" value="{{$product->f_quantity}}" class="" id="qty" name="quantity" onkeyup="multiply()" />
 
                                         <br><strong>PRICE</strong>
                                         <input type="text" name="price" id="price" value="{{$product->i_price}}" readonly/>

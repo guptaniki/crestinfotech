@@ -3,12 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Order_Items;
 use App\Product;
 use App\Product_image;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -41,18 +41,12 @@ class OrderController extends Controller
             $pro_id[]=$carts['product_id'];
             $qty[$carts['product_id']]=array($carts['product_id'],$carts['quantity']);
         }
-
         $product=Product::whereIn('id',$pro_id)->get();
-
         $main_images = Product_image::whereIn('f_product_id', $pro_id)
             ->where('i_main', 1)
             ->get();
-
         $t=session()->get('total',$request['total']);
-
         return view('order.create',compact('product','t','main_images','qty','user'));
-
-
     }
 
 
@@ -64,21 +58,7 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-
-        foreach(session()->get('cart') as $test)
-        {
-            $pro_id[]=$test['product_id'];
-            $qty[$test['product_id']]=array($test['product_id'],$test['quantity']);
-        }
-        $product=Product::whereIn('id',$pro_id)->get();
-
-
-
-        $uid=Auth::id();
-
-        $user=User::find($uid);
         $t=session()->get('total',$request['total']);
-
         $latestOrder = Order::orderBy('created_at','DESC')->first();
         $data=[
             "i_customar_id" => Auth::id(),
@@ -86,27 +66,27 @@ class OrderController extends Controller
             "f_final_total" => $t,
             "v_firstname"=>$request['v_firstname'],
             "v_lastname"=>$request['v_lastname'],
-            "v_email"=>$request['f_email'],
-            "v_address"=>$request['address']
-
-
+            "v_email"=>$request['v_email'],
+            "v_address"=>$request['v_address']
         ];
+        $order=Order::create($data);
+
+        foreach(session()->get('cart') as $row)
+        {
+            $ins=[
+                'i_order_id'=>$order->id,
+                'i_product_id'=>$row['product_id'],
+                'v_product_name'=>$row['name'],
+                'f_price'=>$row['price'],
+                'f_qty'=>$row['quantity'],
+                'f_subtotal'=>$row['price']*$row['quantity']
+            ];
+            Order_Items::create($ins);
+
+        }
 
 
-
-        dd(session()->get('cart'));
-
-
-
-
-
-
-
-        dd($data1);
-
-
-
-return view('order.create',compact('user'));
+return redirect('stripe');
     }
 
     /**
