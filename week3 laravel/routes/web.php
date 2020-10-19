@@ -18,6 +18,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/admin', 'HomeController@admin')->name('admin');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/productlist', 'HomeController@productlist')->name('productlist');
@@ -34,7 +35,8 @@ Route::resource('product','ProductController')->middleware('auth');
 
 Route::get('/order/create', 'OrderController@create');
 Route::resource('order','OrderController');
-
+Route::get('orderhis', 'OrderController@orderhis');
+Route::get('orderdetail', 'OrderController@orderdetail')->name('orderdetail');
 
 Route::get('stripe', 'StripePaymentController@stripe');
 Route::post('stripe', 'StripePaymentController@stripePost')->name('stripe.post');

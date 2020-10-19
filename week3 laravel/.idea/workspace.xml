@@ -208,6 +208,11 @@
       <change afterPath="$PROJECT_DIR$/resources/views/layouts/app1.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/order/checkout.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/order/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order/edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order/index.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/order/show.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/orderdetail.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/orderhis.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/productsingle.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/search.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/stripe.blade.php" afterDir="false" />
@@ -1088,8 +1093,8 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\wamp64\www\crest infotech\crestinfotech\week3 laravel\resources\views\order" />
       <recent name="E:\wamp64\www\crest infotech\crestinfotech\week3 laravel\resources\views" />
+      <recent name="E:\wamp64\www\crest infotech\crestinfotech\week3 laravel\resources\views\order" />
     </key>
   </component>
   <component name="RunManager">
@@ -1132,7 +1137,9 @@
       <workItem from="1602239384107" duration="12447000" />
       <workItem from="1602586844349" duration="13713000" />
       <workItem from="1602674299959" duration="8147000" />
-      <workItem from="1602843237204" duration="10815000" />
+      <workItem from="1602843237204" duration="11145000" />
+      <workItem from="1603101026655" duration="171000" />
+      <workItem from="1603101369175" duration="6972000" />
     </task>
     <servers />
   </component>
@@ -1183,10 +1190,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="450" y="135" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1602073126854" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1602850106755">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1603112472688">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1602850106755" />
+    <state x="604" y="336" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603112472688" />
     <state x="277" y="57" key="SettingsEditor" timestamp="1601468475101">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

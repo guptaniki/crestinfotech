@@ -11,6 +11,7 @@
         </div>
 
     @endif
+    <a class="btn btn-primary" href="{{ url('orderhis') }}"> Order History</a>
 
     <table id="cart" class="table table-hover table-condensed">
         <thead>

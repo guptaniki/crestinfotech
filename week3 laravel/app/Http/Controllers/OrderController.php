@@ -18,10 +18,41 @@ class OrderController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
-    }
+{
+    $orders=Order::all();
+    return view('order.index',compact('orders'))
+        ->with('i', (request()->input('page', 1) - 1) * 10);;
 
+}
+
+    public function orderhis()
+    {
+        $uid=Auth::id();
+        $orders=Order::where('i_customar_id',$uid)->get();
+foreach ($orders as $order)
+{
+    $order_items=Order_Items::where('i_order_id',$order->id)->get();
+
+
+}
+    return view('orderhis',compact('orders','order_items'))
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+
+    }
+    public function orderdetail(Order $order,Order_Items $order_items)
+    {
+        $uid=Auth::id();
+        $orders=Order::where('i_customar_id',$uid)->get();
+        foreach ($orders as $order)
+        {
+            $order_items=Order_Items::where('i_order_id',$order->id)->get();
+
+
+        }
+        return view('orderdetail',compact('order','order_items'))
+            ->with('i', (request()->input('page', 1) - 1) * 10);
+
+    }
 
 
     /**
@@ -84,8 +115,6 @@ class OrderController extends Controller
             Order_Items::create($ins);
 
         }
-
-
 return redirect('stripe');
     }
 
@@ -97,7 +126,9 @@ return redirect('stripe');
      */
     public function show(Order $order)
     {
-        //
+//        dd($order);
+        return view('order.show',compact('order'));
+
     }
 
     /**
@@ -109,6 +140,9 @@ return redirect('stripe');
     public function edit(Order $order)
     {
         //
+//        dd($order);
+        return view('order.edit',compact('order'));
+
     }
 
     /**
@@ -121,6 +155,9 @@ return redirect('stripe');
     public function update(Request $request, Order $order)
     {
         //
+        $order->update($request->all());
+        return redirect()->route('order.index')
+            ->with('success','order Updated successfully.');
     }
 
     /**
@@ -132,5 +169,9 @@ return redirect('stripe');
     public function destroy(Order $order)
     {
         //
+        $order->delete();
+
+        return redirect()->route('order.index')
+            ->with('success','order deleted successfully');
     }
 }

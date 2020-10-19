@@ -32,6 +32,11 @@ class HomeController extends Controller
 
         return view('home',compact('categorys'));
     }
+
+    public function admin()
+    {
+        return view('admin');
+    }
     public function productlist(Request $request)
     {
         if ($request['cat_id'] != '') {
