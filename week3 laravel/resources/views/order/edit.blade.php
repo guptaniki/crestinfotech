@@ -1,4 +1,4 @@
-@extends('category.layout')
+@extends('order.layout')
 
 @section('content')
     <div class="row">
